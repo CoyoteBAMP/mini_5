@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Esto también pasará</title>
+<style>
+html{height:100%;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);background:#05060f}
+body{margin:0;height:100%;font-family:Georgia,'Times New Roman',serif;color:#f4ecd8;overflow:hidden;-webkit-tap-highlight-color:transparent}
+#app{position:relative;height:100%;max-width:520px;margin:0 auto;overflow:hidden;background:#000}
+svg{position:absolute;inset:0;width:100%;height:100%}
+#sc{animation:in 1.2s both}
+#cap{position:absolute;left:0;right:0;bottom:0;padding:70px 22px 26px;background:linear-gradient(transparent,rgba(0,0,0,.8) 60%);text-align:center;min-height:190px;display:flex;flex-direction:column;justify-content:flex-end;pointer-events:none}
+#cap p{margin:0 0 8px;font-size:clamp(15px,4.2vw,19px);line-height:1.45;opacity:0;animation:in 1.3s forwards}
+#cap p.big{font-size:clamp(22px,6.2vw,30px);color:#e8c26a}
+#ov{position:absolute;inset:0;z-index:5;background:radial-gradient(#1b2450,#05060f);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;gap:18px}
+#ov h1{font-weight:normal;font-size:clamp(28px,8vw,40px);color:#e8c26a;margin:0}
+button{font:inherit;color:#1a1020;background:#e8c26a;border:0;border-radius:30px;padding:14px 34px;font-size:18px;cursor:pointer}
+#mt{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:12px;z-index:6;background:rgba(0,0,0,.4);color:#f4ecd8;padding:8px 12px;font-size:14px;display:none}
+.s{font-size:15px;opacity:.6;max-width:300px}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes fo{to{opacity:0}}
+@keyframes bob{50%{transform:translateY(-2px)}}
+@keyframes sw{from{transform:rotate(-25deg)}to{transform:rotate(25deg)}}
+@keyframes mv1{from{transform:translateX(-50px)}to{transform:translateX(130px)}}
+@keyframes mvS{from{transform:translateX(170px)}to{transform:none}}
+@keyframes bow{to{transform:rotate(-24deg)}}
+@keyframes aRu{to{transform:rotate(-140deg)}}
+@keyframes hm{0%{transform:rotate(-170deg)}40%{transform:rotate(-80deg)}100%{transform:rotate(-170deg)}}
+@keyframes sp{0%,35%{opacity:0;transform:none}40%{opacity:1}100%{opacity:0;transform:translate(var(--dx),var(--dy))}}
+@keyframes pu{50%{opacity:.55}}
+@keyframes fl{0%,90%,100%{opacity:0}93%,97%{opacity:.8}}
+@keyframes rf{0%{transform:translateY(-30px);opacity:0}10%{opacity:.8}100%{transform:translateY(240px);opacity:0}}
+@keyframes rm{to{transform:translate(-80px,-6px)}}
+@keyframes fk{50%{transform:scale(1,1.25)}}
+@keyframes up{from{transform:rotate(28deg)}to{transform:none}}
+@keyframes cR{0%,75%{transform:rotate(-140deg)}100%{transform:rotate(-8deg)}}
+@keyframes cL{0%,75%{transform:rotate(140deg)}100%{transform:rotate(8deg)}}
+@keyframes cf{from{transform:translateY(-20px) rotate(0)}to{transform:translateY(300px) rotate(360deg)}}
+@keyframes fade{to{opacity:.25;transform:translateX(-24px)}}
+@keyframes ht{0%{opacity:0;transform:translateY(0)}20%{opacity:1}100%{opacity:0;transform:translateY(-160px)}}
+@keyframes sn{0%,35%{opacity:1}50%,85%{opacity:0}100%{opacity:1}}
+@keyframes mn{0%,35%{opacity:0}50%,85%{opacity:1}100%{opacity:0}}
+@keyframes dn{0%{opacity:0}50%{opacity:.6}100%{opacity:0}}
+@keyframes qf{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(-22px)}}
+@keyframes tw{50%{opacity:.2}}
+@keyframes op{from{opacity:0}to{opacity:1}}
+.bd,.aL,.aR,.hd{transform-origin:0 0}
+.walk{animation:bob .45s infinite}
+.walk .aL{animation:sw .9s infinite alternate}
+.walk .aR{animation:sw .9s infinite alternate-reverse}
+.wb{animation:bob .45s 9,bow 1.6s 4.8s ease forwards}
+.wb .aL{animation:sw .9s 4 alternate}.wb .aR{animation:sw .9s 4 alternate-reverse}
+.sad{transform:rotate(5deg)}.sad .hd{transform:rotate(28deg)}
+.sad2 .hd{transform:rotate(28deg);animation:up 1.6s 6s forwards}
+.rs .aR{animation:aRu 1s 1.5s forwards}
+.hmr .aR{animation:hm .9s infinite}
+.gl{animation:gp 2.6s infinite}
+@keyframes gp{50%{filter:drop-shadow(0 0 8px #ffe08a)}0%,100%{filter:drop-shadow(0 0 3px #e8c26a)}}
+.z{opacity:0}
+.th .hd{animation:thk 3s infinite ease-in-out}
+@keyframes thk{50%{transform:rotate(-14deg)}}
+.cel .aR{animation:cR 8s forwards}.cel .aL{animation:cL 8s forwards}
+.kn{transform:scaleY(.78) rotate(-8deg)}
+.tk .aR{animation:aRu 1s 2.6s forwards}
+.op .aR{animation:aRu 1.2s 8s forwards}.op .aL{animation:aLu 1.2s 8s forwards}
+@keyframes aLu{to{transform:rotate(40deg)}}
+</style>
+</head>
+<body>
+<div id="app">
+<svg id="v" viewBox="0 0 360 560" preserveAspectRatio="xMidYMid slice"><g id="sc"></g></svg>
+<div id="cap"></div>
+<button id="mt">🔊</button>
+<div id="ov"><h1>Para ti, Zaire</h1><div class="s">Sé que han sido días complicados y cansados. Me gustaría poder estar a tu lado, pero te puedo contar una pequeña historia que me gusta mucho y me ayuda en algunos momentos.</div><button id="go">Comenzar</button></div>
+</div>
+<script>
+function G(i,a,b){return '<linearGradient id="'+i+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+a+'"/><stop offset="1" stop-color="'+b+'"/></linearGradient>'}
+function B(i,a,b){return '<defs>'+G(i,a,b)+'</defs><rect width="360" height="560" fill="url(#'+i+')"/>'}
+function P(x,y,s,o){o=o||{};var r=o.r||'#7a2c3a',k='#f0c9a0',h=o.h||'#2b1b12';
+return '<g transform="translate('+x+' '+y+') scale('+s+')"><g class="bd '+(o.c||'')+'">'
++(o.dress?'<path d="M-15 0L-7 -35H7L15 0Z" fill="'+r+'"/>':'<path d="M-11 0L-8 -35Q0 -40 8 -35L11 0Z" fill="'+r+'"/>')
++'<g transform="translate(-8 -33)"><g class="aL"><path d="M0 0L-5 17" stroke="'+r+'" stroke-width="5" stroke-linecap="round"/><circle cx="-5" cy="18" r="2.6" fill="'+k+'"/></g></g>'
++'<g transform="translate(8 -33)"><g class="aR"><path d="M0 0L5 17" stroke="'+r+'" stroke-width="5" stroke-linecap="round"/><circle cx="5" cy="18" r="2.6" fill="'+k+'"/>'+(o.tool||'')+'</g></g>'
++'<g transform="translate(0 -37)"><g class="hd"><circle cy="-8" r="8" fill="'+k+'"/>'
++(o.long?'<path d="M-9 -9Q-9 -19 0 -19Q9 -19 9 -9L10 6Q4 4 7 -9L-7 -9Q-4 4 -10 6Z" fill="'+h+'"/>':'<path d="M-8 -10Q-8 -18 0 -17Q8 -18 8 -10Q0 -14 -8 -10Z" fill="'+h+'"/>')
++(o.beard?'<path d="M-7 -5Q0 13 7 -5Q0 3 -7 -5Z" fill="#e6e6e6"/>':'')
++(o.crown?'<path d="M-7 -15L-8 -25L-3 -20L0 -27L3 -20L8 -25L7 -15Z" fill="#e8c26a"/>':'')
++'<circle cx="-3" cy="-8" r="1" fill="#222"/><circle cx="3" cy="-8" r="1" fill="#222"/></g></g></g></g>'}
+function rain(x0,w,n){var s='';for(var i=0;i<n;i++)s+='<line x1="'+(x0+Math.random()*w)+'" y1="60" x2="'+(x0+Math.random()*w)+'" y2="72" stroke="#9ab4e0" stroke-width="1.5" style="animation:rf '+(.8+Math.random()*.7)+'s '+Math.random()*2+'s infinite"/>';return s}
+function ring(x,y,s,txt,id){return '<g transform="translate('+x+' '+y+') scale('+s+')"><g class="gl"><circle r="38" fill="none" stroke="#e8c26a" stroke-width="7"/><circle r="34.5" fill="none" stroke="#a97a22" stroke-width="1" opacity=".7"/></g>'+(txt?'<defs><path id="'+id+'" d="M-27 0a27 27 0 1 1 54 0a27 27 0 1 1 -54 0"/></defs><text font-size="6.2" fill="#fff3c4" letter-spacing="1.1" style="opacity:0;animation:op 2s 1.8s forwards"><textPath href="#'+id+'" startOffset="25%" text-anchor="middle"> ""ESTO TAMBIÉN PASARÁ</textPath></text>':'')+'</g>'}
+var HT='<path d="M0 6C-9 -2 -5 -9 0 -4C5 -9 9 -2 0 6Z" fill="#f2a6a0"/>';
+var S=[
+{d:12,t:['Había una vez un rey poderoso, dueño de un enorme reino, de riquezas y de todo lo que alguien podría desear.'],
+f:function(){var w='';for(var i=0;i<8;i++)w+='';
+return B('a','#2b1f55','#f2a65a')+'<circle cx="250" cy="305" r="46" fill="#ffd9a0" opacity=".9" class="gl"/><path d="M0 360Q90 300 180 350T360 330V560H0Z" fill="#4a3566"/>'
++'<g fill="#241a3d"><rect x="140" y="300" width="80" height="90"/><rect x="128" y="270" width="24" height="120"/><rect x="208" y="262" width="24" height="128"/><path d="M124 270L140 245L156 270ZM204 262L220 235L236 262Z"/><path d="M165 390V355Q180 335 195 355V390Z" fill="#f2a65a"/></g><g fill="#ffd36a" style="animation:pu 2s infinite"><rect x="136" y="285" width="6" height="10"/><rect x="218" y="280" width="6" height="10"/></g>'
++'<path d="M0 425Q120 385 360 415V560H0Z" fill="#1a1230"/>'
++'<path d="M60 150q8-8 16 0q8-8 16 0" stroke="#241a3d" fill="none" stroke-width="2" style="animation:mv1 12s linear forwards"/><path d="M200 110q6-6 12 0q6-6 12 0" stroke="#241a3d" fill="none" stroke-width="2" style="animation:mv1 14s linear forwards"/>'
++'<g style="animation:mv1 11s linear forwards">'+P(60,420,2.2,{c:'walk',crown:1,r:'#8c2f45'})+'</g>'}},
+{d:11,t:['Pero un día, sin que nadie supiera por qué, una profunda tristeza se apoderó de él.','Nada de lo que tenía lograba devolverle la calma.'],
+f:function(){return B('b','#14111f','#262035')+'<defs><clipPath id="w1"><path d="M125 250V120Q125 60 180 60Q235 60 235 120V250Z"/></clipPath></defs><path d="M125 250V120Q125 60 180 60Q235 60 235 120V250Z" fill="#1d2c4a"/><g clip-path="url(#w1)">'+rain(125,110,16)+'<rect x="120" y="50" width="120" height="210" fill="#fff" style="animation:fl 5s infinite;opacity:0"/></g><path d="M125 250V120Q125 60 180 60Q235 60 235 120V250Z" fill="none" stroke="#5a4a6a" stroke-width="5"/>'
++'<rect y="385" width="360" height="175" fill="#2a2236"/><rect x="135" y="260" width="90" height="140" rx="10" fill="#5a2a3a"/><path d="M135 262Q180 225 225 262Z" fill="#6e3447"/>'
++P(180,405,2.3,{c:'sad',crown:1,r:'#8c2f45'})}},
+{d:12,t:['Entonces mandó llamar a los sabios del reino y les pidió algo muy especial:','«Háganme algo que me ayude a sentirme bien en los momentos difíciles».'],
+f:function(){var s='';[['#2f5d8a',0],['#3a7a5a',.6],['#6a3a8a',1.2]].forEach(function(c,i){s+='<g style="animation:mvS 4s '+c[1]+'s ease-out both"><g>'+P(230+i*42,405,1.9,{c:'wb',beard:1,r:c[0],h:'#ddd'})+'</g></g>'});
+return B('c','#1c1830','#3a2c4a')+'<rect y="385" width="360" height="175" fill="#2f2540"/><rect x="20" y="120" width="60" height="265" fill="#3a2a4a"/><rect x="280" y="120" width="60" height="265" fill="#3a2a4a"/><g fill="#e8c26a" style="animation:pu 1.5s infinite"><ellipse cx="50" cy="110" rx="5" ry="9"/><ellipse cx="310" cy="110" rx="5" ry="9"/></g>'
++'<g transform="translate(0 0)">'+P(100,405,2.3,{c:'rs',crown:1,r:'#8c2f45'})+'</g>'+s}},
+{d:13,t:['Los sabios pensaron y pensaron.','Pasaron los días, las noches, las semanas…','y ninguna idea parecía ser la correcta.'],
+f:function(){var bk='',cs=['#8a3a3a','#3a6a8a','#c79a3d','#4a7a4a','#7a4a8a'];for(var j=0;j<3;j++)for(var i=0;i<6;i++){bk+='<rect x="'+(i*9+14)+'" y="'+(110+j*80)+'" width="7" height="'+(26+(i*7)%10)+'" fill="'+cs[(i+j)%5]+'"/><rect x="'+(i*9+294)+'" y="'+(110+j*80)+'" width="7" height="'+(26+(i*5)%12)+'" fill="'+cs[(i+j+2)%5]+'"/>'}
+var wp='M130 200V120Q130 70 180 70Q230 70 230 120V200Z';
+return B('d','#0e1230','#1d2250')+'<rect x="8" y="100" width="68" height="250" fill="#3b2a22"/><rect x="284" y="100" width="68" height="250" fill="#3b2a22"/>'+bk
++'<defs><clipPath id="w3"><path d="'+wp+'"/></clipPath></defs><path d="'+wp+'" fill="#4a7ab8"/><g clip-path="url(#w3)"><circle cx="180" cy="125" r="18" fill="#ffd36a" style="animation:sn 4.5s infinite"/><circle cx="180" cy="115" r="14" fill="#e8eeff" style="animation:mn 4.5s infinite"/><rect x="120" y="60" width="120" height="150" fill="#050818" style="animation:dn 4.5s infinite"/></g><path d="'+wp+'" fill="none" stroke="#6a5a4a" stroke-width="5"/>'
++'<text id="dc" x="180" y="232" text-anchor="middle" font-size="19" fill="#e8c26a">Día 1</text><rect y="385" width="360" height="175" fill="#241c3a"/>'
++P(180,352,1.7,{c:'th',beard:1,r:'#6a3a8a',h:'#ddd'})+P(100,405,2,{c:'th',beard:1,r:'#2f5d8a',h:'#ddd'})+P(262,405,2,{c:'th',beard:1,r:'#3a7a5a',h:'#ddd'})
++'<rect x="115" y="335" width="130" height="12" fill="#6a4a30"/><rect x="120" y="347" width="120" height="40" fill="#4a3220"/><rect x="176" y="316" width="8" height="19" fill="#f4ecd8"/><ellipse cx="180" cy="310" rx="3.5" ry="7" fill="#ffb347" style="transform-origin:180px 317px;animation:fk .5s infinite"/>'
++'<g fill="#e8c26a" font-size="22"><text x="92" y="305" style="animation:qf 3s infinite">?</text><text x="258" y="305" style="animation:qf 3s 1s infinite">?</text><text x="176" y="250" style="animation:qf 3s 2s infinite">?</text></g>'},
+i:function(){var n=1,e=document.getElementById('dc');tm.push(setInterval(function(){if(e&&n<90)e.textContent='Día '+(++n)},125))}},
+{d:12,t:['Hasta que a uno de ellos se le ocurrió algo sencillo…','forjar un anillo.'],
+f:function(){var sp='';for(var i=0;i<7;i++)sp+='<circle cx="258" cy="348" r="2.4" fill="#ffd36a" style="--dx:'+(-40+i*14)+'px;--dy:'+(-30-(i%3)*14)+'px;animation:sp .9s infinite"/>';
+return B('e','#1a0c08','#3a1608')+'<defs><radialGradient id="fg"><stop offset="0" stop-color="#ffb347"/><stop offset="1" stop-color="#ff5a1a" stop-opacity="0"/></radialGradient></defs><circle cx="90" cy="330" r="130" fill="url(#fg)" style="animation:pu 1.2s infinite"/><rect x="25" y="290" width="130" height="110" rx="8" fill="#3a2a28"/><rect x="50" y="325" width="80" height="45" rx="6" fill="#ff8a2a" style="animation:pu .8s infinite"/>'
++'<rect y="400" width="360" height="160" fill="#241210"/>'
++'<path d="M200 350H315L300 364H278V384H298V400H212V384H232V364H215Z" fill="#555a66"/><rect x="200" y="348" width="115" height="6" fill="#7a808c"/>'
++P(172,400,2.1,{c:'',r:'#4a3a30',tool:'<path d="M5 18V36" stroke="#6a4a30" stroke-width="3"/><rect x="1" y="34" width="12" height="7" fill="#777"/>'}).replace('class="bd "','class="bd hmr"')
++sp+'<g style="opacity:0;animation:op 1.5s 7s forwards">'+ring(252,338,.27,0)+'</g>'}},
+{d:15,t:['Cuando se lo entregaron, el rey se lo puso.','Y al mirarlo de cerca, descubrió una frase grabada por dentro:','*Esto también pasará.'],
+f:function(){return B('f','#241c3a','#4a3552')+'<rect y="385" width="360" height="175" fill="#3a2c4a"/><rect x="20" y="130" width="50" height="255" fill="#4a3a5a"/><rect x="290" y="130" width="50" height="255" fill="#4a3a5a"/><g fill="#e8c26a" style="animation:pu 1.5s infinite"><ellipse cx="45" cy="118" rx="5" ry="9"/><ellipse cx="315" cy="118" rx="5" ry="9"/></g>'
++P(120,405,2.3,{c:'tk',crown:1,r:'#8c2f45'})+P(250,405,2,{c:'kn',beard:1,r:'#2f5d8a',h:'#ddd'})
++'<g style="animation:rm 3s 1.2s forwards"><circle cx="236" cy="357" r="5" fill="none" stroke="#e8c26a" stroke-width="2.2" class="gl"/></g>'
++'<g style="opacity:0;animation:op 1.4s 7.5s forwards"><rect width="360" height="560" fill="rgba(5,4,15,.88)"/>'+ring(180,230,3.1,1,'rp')+'</g>'}},
+{d:14,t:['Desde entonces, cuando la tristeza lo ahogaba, miraba su anillo y recordaba que ese dolor no sería eterno.','Y cuando la gloria lo llenaba de orgullo, lo miraba otra vez, y seguía siendo humilde.'],
+f:function(){var cf='',c=['#e8c26a','#f2a6a0','#9ad0f0','#fff'];for(var i=0;i<16;i++)cf+='<rect x="'+(186+Math.random()*170)+'" y="50" width="5" height="8" fill="'+c[i%4]+'" style="animation:cf '+(2+Math.random()*1.5)+'s '+Math.random()*2+'s infinite"/>';
+return '<defs><clipPath id="cl"><rect x="0" y="40" width="178" height="350"/></clipPath><clipPath id="cr"><rect x="182" y="40" width="178" height="350"/></clipPath>'+G('m1','#252c40','#4a5368')+G('m2','#ffb36b','#ffe9b0')+G('m3','#4a2a6a','#e8a85a')+'</defs><rect width="360" height="560" fill="#0b0d1a"/>'
++'<g clip-path="url(#cl)"><rect y="40" width="178" height="350" fill="url(#m1)"/><g style="animation:fo 1.5s 6s forwards">'+rain(0,178,14)+'</g><rect y="40" width="178" height="350" fill="url(#m2)" class="z" style="animation:op 3s 6s forwards"/><rect y="340" width="178" height="50" fill="#1b1a2a"/>'+P(90,365,2.1,{c:'sad2',crown:1,r:'#8c2f45'})+'<circle cx="112" cy="341" r="4" fill="none" stroke="#e8c26a" stroke-width="2" class="gl"/></g>'
++'<g clip-path="url(#cr)"><rect x="182" y="40" width="178" height="350" fill="url(#m3)"/><rect x="182" y="340" width="178" height="50" fill="#2a1a38"/><g style="animation:fo 1.5s 6.5s forwards">'+cf+'</g>'+P(270,365,2.1,{c:'cel',crown:1,r:'#8c2f45'})+'</g><rect x="177" y="40" width="6" height="350" fill="#e8c26a"/>'}},
+{d:24,t:['En la vida habrá cosas muy buenas y otras muy malas.','Cada vez que pueda, estaré a tu lado para superarlas juntos.','Pero aunque la distancia no me deje estar contigo, recuerda que lo que estés viviendo también será pasajero.', '*Vas a poder con todo, Zaire. Yo creo en ti.'],
+f:function(){var st='';for(var i=0;i<45;i++)st+='<circle cx="'+Math.random()*360+'" cy="'+Math.random()*300+'" r="'+(.6+Math.random()*1.2)+'" fill="#fff" style="animation:tw '+(2+Math.random()*3)+'s '+Math.random()*3+'s infinite"/>';
+var h='';for(var i=0;i<9;i++)h+='<g transform="translate('+(110+i*18)+' 340)"><g style="opacity:0;animation:ht 4s '+(15+i*.9)+'s infinite">'+HT+'</g></g>';
+return B('g','#070a22','#27306a')+st+'<circle cx="270" cy="120" r="34" fill="#f4ecd8" class="gl"/><path d="M0 405Q150 350 360 395V560H0Z" fill="#0f1535"/>'
++'<g style="animation:fade 4s 9s forwards">'+P(150,400,2.1,{r:'#2f4a7a'})+'<circle cx="178" cy="368" r="4" fill="#ffd36a" class="gl"/></g>'
++P(206,400,2.1,{c:'op',dress:1,long:1,r:'#c77a8c',h:'#3a2218'})+'<g style="opacity:0;animation:op 3s 11s forwards"><circle cx="206" cy="340" r="62" fill="#e8c26a" opacity=".12" class="gl"/></g>'+h}}
+];
+var TN=['ho','sad','sad','th','fo','ho','ho','ho'],DS=[1,1,1,1,2,2,2,3],cur=0,tm=[];
+var PR={sad:[[45,52,57,60],[41,48,53,57],[38,45,50,53],[40,47,52,56]],th:[[38,45,50,53],[46,53,58,62],[41,48,53,57],[36,43,48,52]],fo:[[45,52,57,60],[43,50,55,59],[41,48,53,57],[40,47,52,56]],ho:[[36,48,52,55],[43,50,55,59],[45,52,57,60],[41,48,53,57]]};
+var AC,mst,dl,step=0,muted=false,iv;
+function M(n){return 440*Math.pow(2,(n-69)/12)}
+function nt(f,t,d,v,ty){var o=AC.createOscillator(),g=AC.createGain();o.type=ty;o.frequency.value=f;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.03);g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g);g.connect(mst);g.connect(dl);o.start(t);o.stop(t+d+.1)}
+function audio(){try{AC=new(window.AudioContext||window.webkitAudioContext)();mst=AC.createGain();mst.gain.value=.8;mst.connect(AC.destination);dl=AC.createDelay();dl.delayTime.value=.4;var fb=AC.createGain();fb.gain.value=.4;dl.connect(fb);fb.connect(dl);dl.connect(mst);iv=setInterval(tick,450)}catch(e){}}
+function tick(){if(muted||AC.state!=='running')return;var t=AC.currentTime+.05,ch=PR[TN[cur]][(step>>3)&3],s=step&7,dn=DS[cur];
+if(s==0){nt(M(ch[0]),t,4,.25,'sine');[1,2,3].forEach(function(i){nt(M(ch[i]),t,4.2,.05,'triangle')})}
+nt(M(ch[[1,3,2,3,1,3,2,3][s]]+12),t,1.5,.09,'triangle');
+if(s==2||(dn>1&&s==6)||(dn>2&&s==4))nt(M(ch[(step*3+s)%3+1]+24),t,1.9,.08,'sine');
+if(cur==4&&s%2==0){nt(950,t,.3,.07,'sine');nt(1900,t,.12,.03,'sine')}
+step++}
+var cap=document.getElementById('cap'),sc=document.getElementById('sc'),ov=document.getElementById('ov');
+function show(n){tm.forEach(function(x){clearTimeout(x);clearInterval(x)});tm=[];cur=n;var s=S[n];
+sc.style.animation='none';sc.offsetHeight;sc.style.animation='';sc.innerHTML=s.f();
+var L=s.t,gap=(s.d-5)*1000/L.length;cap.innerHTML='';
+L.forEach(function(l,j){var p=document.createElement('p'),b=l[0]==='*';p.textContent=b?l.slice(1):l;if(b)p.className='big';p.style.animationDelay=(1000+j*gap)+'ms';cap.appendChild(p)});
+if(s.i)s.i();
+tm.push(setTimeout(function(){if(n<S.length-1)show(n+1);else end()},s.d*1000))}
+function end(){if(mst)mst.gain.setTargetAtTime(0,AC.currentTime,2);ov.style.display='flex';ov.querySelector('h1').textContent='Fin';ov.querySelector('.s').textContent='Recuerda: creo en ti, Zaire.';document.getElementById('go').textContent='Volver a ver'}
+document.getElementById('go').onclick=function(e){e.stopPropagation();ov.style.display='none';document.getElementById('mt').style.display='block';if(!AC)audio();else{mst.gain.cancelScheduledValues(0);mst.gain.value=.8}if(AC&&AC.state!=='running')AC.resume();step=0;show(0)};
+document.getElementById('mt').onclick=function(e){e.stopPropagation();muted=!muted;this.textContent=muted?'🔇':'🔊';if(mst)mst.gain.value=muted?0:.8};
+document.getElementById('app').addEventListener('click',function(){if(ov.style.display==='none'&&cur<S.length-1)show(cur+1)});
+</script>
+</body>
+</html>
